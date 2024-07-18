@@ -1,0 +1,16 @@
+import 'package:equatable/equatable.dart';
+
+abstract class CounterEvent extends Equatable {
+  const CounterEvent();
+
+  @override
+  List<Object> get props => [];
+}
+
+  class IncrementCounter extends CounterEvent {}
+
+  class ResetCounter extends CounterEvent {}
+  class LoadCounterEvent extends CounterEvent {
+  @override
+  String toString() => 'LoadCounterEvent';
+  }
